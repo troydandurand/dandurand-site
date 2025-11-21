@@ -1,5 +1,2 @@
-﻿User-agent: *
+User-agent: *
 Allow: /
-
-
-Sitemap: https://dandurandenterprises.com/sitemap.xml
