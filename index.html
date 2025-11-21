@@ -3,121 +3,149 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DanDurand Enterprises | Management Consulting & Holding-Company Advisory</title>
-    <meta name="description" content="Strategic management consulting and holding-company governance since 1978. Serving family offices, private equity, and operating companies nationwide.">
+    <title>DanDurand Enterprises | Strategic Management Consulting</title>
+    <meta name="description" content="Institutional-grade management consulting and holding-company advisory since 1978.">
     <style>
-        :root {--navy:#003366; --gold:#d4af37; --light:#f8f9fa; --gray:#555;}
-        body {font-family:'Georgia',serif; margin:0; color:#333; background:#fff; line-height:1.7;}
-        header {background:var(--navy); color:#fff; padding:4rem 1rem; text-align:center;}
-        header h1 {margin:0; font-size:2.9rem; letter-spacing:1px;}
-        header p {font-size:1.35rem; opacity:0.9; margin-top:0.8rem;}
-        nav {background:#fff; padding:1.2rem; text-align:center; box-shadow:0 2px 10px rgba(0,0,0,0.1);}
-        nav a {margin:0 1.6rem; color:var(--navy); text-decoration:none; font-weight:600; font-size:1.1rem;}
-        nav a:hover {color:var(--gold);}
-        section {padding:5rem 1rem; max-width:1100px; margin:0 auto;}
-        h2 {font-size:2.5rem; color:var(--navy); text-align:center; margin-bottom:2.5rem; position:relative;}
-        h2:after {content:''; width:90px; height:4px; background:var(--gold); position:absolute; bottom:-15px; left:50%; transform:translateX(-50%);}
-        .hero {background:var(--light); text-align:center;}
-        .hero p {font-size:1.25rem; max-width:900px; margin:1.5rem auto;}
-        .grid {display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:2.5rem; margin-top:3rem;}
-        .card {background:#fff; padding:2.2rem; border-radius:12px; box-shadow:0 6px 20px rgba(0,0,0,0.08);}
-        .card h3 {color:var(--navy); font-size:1.5rem; margin-top:0;}
-        .pricing {background:var(--light); text-align:center;}
-        .pricing-grid {display:grid; grid-template-columns:repeat(auto-fit,minmax(320px,1fr)); gap:2rem; max-width:1100px; margin:3rem auto;}
-        .price-card {background:#fff; padding:2.8rem; border-radius:14px; box-shadow:0 10px 30px rgba(0,0,0,0.1);}
-        .price-card h3 {color:var(--navy); font-size:1.9rem;}
-        .price {font-size:3.2rem; font-weight:bold; color:var(--navy);}
-        .save {background:var(--gold); color:#fff; padding:0.4rem 1rem; border-radius:30px; font-size:0.95rem;}
-        .buy-btn {background:var(--navy); color:#fff; padding:1.1rem 2.8rem; text-decoration:none; border-radius:8px; display:inline-block; margin-top:1.5rem; font-weight:600; font-size:1.1rem;}
-        footer {background:var(--navy); color:#fff; text-align:center; padding:2.5rem; font-size:0.95rem;}
-        @media (max-width:768px) {header h1{font-size:2.3rem;}}
+        *{margin:0;padding:0;box-sizing:border-box;}
+        :root{--navy:#1a2332;--gold:#c9a961;--cream:#f8f6f1;--gray:#5a6570;--light-gray:#e8e6e1;}
+        body{font-family:'Georgia',serif;line-height:1.6;color:var(--navy);background:var(--cream);}
+        .container{max-width:1200px;margin:0 auto;padding:0 30px;}
+        header{background:var(--navy);padding:25px 0;box-shadow:0 2px 10px rgba(0,0,0,0.1);}
+        nav{display:flex;justify-content:space-between;align-items:center;}
+        .logo{font-size:1.4rem;font-weight:600;color:var(--cream);letter-spacing:0.5px;}
+        .nav-links{display:flex;gap:35px;list-style:none;}
+        .nav-links a{color:var(--cream);text-decoration:none;font-size:0.95rem;transition:color .3s;}
+        .nav-links a:hover{color:var(--gold);}
+        .hero{text-align:center;padding:100px 0 80px;background:linear-gradient(135deg,var(--navy) 0%,#2a3d52 100%);color:var(--cream);}
+        .hero h1{font-size:3.5rem;font-weight:400;margin-bottom:15px;letter-spacing:1px;}
+        .hero .tagline{font-size:1.3rem;color:var(--gold);font-style:italic;margin-bottom:10px;}
+        .hero .years{font-size:1rem;color:var(--light-gray);opacity:0.9;}
+        .about,.competencies,.pricing{padding:80px 0;}
+        .about{background:white;}
+        .about .intro{font-size:1.25rem;line-height:1.8;color:var(--gray);text-align:center;max-width:900px;margin:0 auto;}
+        .section-title{text-align:center;font-size:2.5rem;font-weight:400;margin-bottom:60px;color:var(--navy);}
+        .competency-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:40px;}
+        .competency-card{background:white;padding:40px 35px;border-radius:2px;box-shadow:0 4px 15px rgba(0,0,0,0.08);transition:.3s;}
+        .competency-card:hover{transform:translateY(-5px);box-shadow:0 8px 25px rgba(0,0,0,0.12);}
+        .competency-card h3{font-size:1.4rem;margin-bottom:15px;color:var(--navy);}
+        .competency-card p{color:var(--gray);line-height:1.7;font-size:0.98rem;}
+        .pricing{background:white;}
+        .pricing-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:30px;max-width:1000px;margin:0 auto;}
+        .price-card{background:var(--cream);padding:45px 35px;border-radius:2px;text-align:center;border:2px solid var(--light-gray);transition:.3s;position:relative;}
+        .price-card.featured{border-color:var(--gold);transform:scale(1.05);}
+        .price-card:hover{border-color:var(--gold);box-shadow:0 8px 30px rgba(201,169,97,.2);}
+        .price-card .badge{position:absolute;top:-15px;left:50%;transform:translateX(-50%);background:var(--gold);color:var(--navy);padding:5px 20px;font-size:.85rem;font-weight:600;border-radius:20px;}
+        .price-card h3{font-size:1.5rem;margin-bottom:10px;color:var(--navy);}
+        .price-card .price{font-size:2.8rem;color:var(--gold);margin:20px 0;font-weight:600;}
+        .price-card .savings{font-size:.9rem;color:var(--gray);margin-bottom:15px;font-style:italic;}
+        .price-card .description{color:var(--gray);margin-bottom:30px;font-size:.95rem;}
+        .btn{display:inline-block;background:var(--navy);color:var(--cream);padding:14px 40px;text-decoration:none;border-radius:2px;transition:.3s;font-size:1rem;border:2px solid var(--navy);}
+        .btn:hover{background:var(--gold);border-color:var(--gold);color:var(--navy);}
+        .payment-note{text-align:center;margin-top:40px;color:var(--gray);font-size:.95rem;font-style:italic;}
+        .contact{background:var(--navy);color:var(--cream);padding:80px 0;}
+        .contact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:40px;max-width:900px;margin:0 auto;text-align:center;}
+        .contact-item h3{color:var(--gold);font-size:1.1rem;margin-bottom:10px;}
+        .contact-item a{color:var(--cream);text-decoration:none;}
+        .contact-item a:hover{color:var(--gold);}
+        footer{background:#0f1419;color:var(--light-gray);text-align:center;padding:30px 0;font-size:.9rem;}
+        @media(max-width:768px){
+            .hero h1{font-size:2.5rem;}
+            .price-card.featured{transform:none;}
+        }
     </style>
 </head>
 <body>
-
     <header>
-        <h1>DanDurand Enterprises</h1>
-        <p>Management Consulting & Holding-Company Advisory Since 1978</p>
+        <div class="container">
+            <nav>
+                <div class="logo">DanDurand Enterprises</div>
+                <ul class="nav-links">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#pricing">Advisory Packages</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <nav>
-        <a href="#about">About</a>
-        <a href="#services">Services</a>
-        <a href="#book">Book & Pay</a>
-        <a href="#contact">Contact</a>
-    </nav>
-
-    <section id="about" class="hero">
-        <h2>45 Years of Institutional-Grade Advisory</h2>
-        <p>DanDurand Enterprises delivers strategic management consulting, operational excellence, and holding-company governance for family offices, private equity groups, and operating companies across the United States.</p>
-        <p>Primary NAICS 541611 • Holding Companies (551111) • Office Administrative Services (561110)</p>
+    <section class="hero">
+        <div class="container">
+            <h1>DanDurand Enterprises</h1>
+            <p class="tagline">Strategic Management Consulting & Holding-Company Advisory</p>
+            <p class="years">Serving Institutional Clients Since 1978</p>
+        </div>
     </section>
 
-    <section id="services">
-        <h2>Core Competencies</h2>
-        <div class="grid">
-            <div class="card">
-                <h3>Administrative Foundation</h3>
-                <p>Professional infrastructure supporting institutional-grade client service and long-term banking partner relationships — backed by Fortune 100 operational experience and systematic business development methodology.</p>
-            </div>
-            <div class="card">
-                <h3>Operations Excellence</h3>
-                <p>Scalable processes and technology platforms enabling efficient documentation, relationship management, and performance tracking — leveraging 24+ years of large-scale corporate operations expertise.</p>
-            </div>
-            <div class="card">
-                <h3>Marketing & Sales Authority</h3>
-                <p>Sophisticated lead-generation and client-acquisition systems targeting high-value opportunities, supported by a proven Fortune 100 business-development track record and strategic partnership capabilities.</p>
-            </div>
-            <div class="card">
-                <h3>Ownership & Security Structure</h3>
-                <p>Professional entity formation, insurance, bonding, and regulatory compliance frameworks that instill banking-partner confidence through institutional-grade governance and 30+ years of validated relationships.</p>
-            </div>
-            <div class="card">
-                <h3>Success Metrics & Performance Guarantees</h3>
-                <p>Clear KPIs, milestone-based engagements, and performance-linked retainers ensuring measurable results and complete alignment with client objectives.</p>
+    <section id="about" class="about">
+        <div class="container">
+            <p class="intro">
+                We deliver institutional-grade strategic consulting, operational excellence, and holding-company governance for family offices, private equity groups, and operating companies across the United States. With nearly five decades of experience, we bring Fortune 100 expertise to every engagement, ensuring measurable results through systematic methodology and proven client relationships.
+            </p>
+        </div>
+    </section>
+
+    <section id="services" class="competencies">
+        <div class="container">
+            <h2 class="section-title">Core Competencies</h2>
+            <div class="competency-grid">
+                <div class="competency-card"><h3>Administrative Excellence</h3><p>Professional infrastructure supporting institutional-grade client service and long-term banking partner relationships—backed by Fortune 100 operational experience and systematic business development methodology.</p></div>
+                <div class="competency-card"><h3>Operational Systems</h3><p>Scalable processes and technology platforms enabling efficient documentation, relationship management, and performance tracking—leveraging 24+ years of large-scale corporate operations expertise.</p></div>
+                <div class="competency-card"><h3>Strategic Marketing</h3><p>Sophisticated lead-generation and client-acquisition systems targeting high-value opportunities, supported by proven Fortune 100 business development track record and strategic partnership capabilities.</p></div>
+                <div class="competency-card"><h3>Governance & Compliance</h3><p>Professional entity formation, insurance, bonding, and regulatory compliance frameworks that instill banking-partner confidence through institutional-grade governance and 30+ years of validated relationships Availability.</p></div>
+                <div class="competency-card"><h3>Performance Management</h3><p>Clear KPIs, milestone-based engagements, and performance-linked retainers ensuring measurable results and complete alignment with client objectives through transparent accountability systems.</p></div>
             </div>
         </div>
     </section>
 
-    <section id="book" class="pricing">
-        <h2>Prepaid Consulting Packages</h2>
-        <div class="pricing-grid">
-            <div class="price-card">
-                <h3>1-Hour Advisory</h3>
-                <div class="price">$150</div>
-                <p>Targeted strategy session</p>
-                <a href="https://buy.stripe.com/test_14A14o86kcnk5kx50D4Ja00" class="buy-btn">Buy 1 Hour</a>
+    <section id="pricing" class="pricing">
+        <div class="container">
+            <h2 class="section-title">Prepaid Advisory Packages</h2>
+            <div class="pricing-grid">
+                <div class="price-card">
+                    <h3>Strategic Session</h3>
+                    <div class="price">$150</div>
+                    <p class="description">One-hour targeted advisory consultation</p>
+                    <a href="https://buy.stripe.com/test_14A14o86kcnk5kx50D4Ja00" class="btn">Book Now</a>
+                </div>
+                <div class="price-card featured">
+                    <div class="badge">Most Popular</div>
+                    <h3>Essential Package</h3>
+                    <div class="price">$725</div>
+                    <p class="savings">Save 3% • Five Hours</p>
+                    <p class="description">Comprehensive advisory engagement</p>
+                    <a href="https://buy.stripe.com/test_bJe6oIdqE874bIVfFh4Ja01" class="btn">Book Now</a>
+                </div>
+                <div class="price-card">
+                    <h3>Executive Retainer</h3>
+                    <div class="price">$1,400</div>
+                    <p class="savings">Save 7% • Ten Hours</p>
+                    <p class="description">Extended partnership for ongoing advisory</p>
+                    <a href="https://buy.stripe.com/test_8x29AUdqE2MKdR3ct54Ja02" class="btn">Book Now</a>
+                </div>
             </div>
-            <div class="price-card">
-                <h3>5-Hour Package</h3>
-                <div class="price">$725</div>
-                <span class="save">Save 3%</span>
-                <p>Most popular</p>
-                <a href="https://buy.stripe.com/test_bJe6oIdqE874bIVfFh4Ja01" class="buy-btn">Buy 5 Hours</a>
-            </div>
-            <div class="price-card">
-                <h3>10-Hour Retainer</h3>
-                <div class="price">$1,400</div>
-                <span class="save">Save 7%</span>
-                <p>Ongoing advisory</p>
-                <a href="https://buy.stripe.com/test_8x29AUdqE2MKdR3ct54Ja02" class="buy-btn">Buy 10 Hours</a>
-            </div>
+            <p class="payment-note">Secure payment processing powered by Stripe</p>
         </div>
-        <p><img src="https://stripe.com/img/documentation/checkout/icon.png" alt="Stripe" style="height:24px; vertical-align:middle;"> Secure payment processed by Stripe</p>
     </section>
 
-    <section id="contact">
-        <h2>Contact</h2>
-        <p style="text-align:center; font-size:1.25rem;">
-            <strong>Email:</strong> <a href="mailto:info@DanDurandEnterprises.com">info@DanDurandEnterprises.com</a><br>
-            <strong>Phone:</strong> +1 (888) 784-2920<br>
-            <strong>Address:</strong> 1915 Hwy 36 W, PMB 140, Roseville, MN 55113
-        </p>
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title" style="color:var(--cream);">Get in Touch</h2>
+            <div class="contact-grid">
+                <div class="contact-item"><h3>Email</h3><a href="mailto:info@DanDurandEnterprises.com">info@DanDurandEnterprises.com</a></div>
+                <div class="contact-item"><h3>Phone</h3><a href="tel:+18887842920">+1 (888) 784-2920</a></div>
+                <div class="contact-item"><h3>Office</h3><p>1915 Hwy 36 W, PMB 140<br>Roseville, MN 55113</p></div>
+            </div>
+        </div>
     </section>
 
     <footer>
-        <p>© 2025 DanDurand Enterprises • Established 1978 • All Rights Reserved</p>
+        <div class="container">
+            <p style="margin-bottom:15px;font-size:0.85rem;line-height:1.6;">
+                <strong>Regulatory Disclosure:</strong> DanDurand Enterprises does not engage in capital raising, securities offerings, or lender-broker activities. All services are management consulting and advisory in nature.
+            </p>
+            <p>© 2025 DanDurand Enterprises. All rights reserved.</p>
+        </div>
     </footer>
-
 </body>
 </html>
